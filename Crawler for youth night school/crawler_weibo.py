@@ -67,10 +67,12 @@ for info_item in URL_INFO:
         response = requests.get(url=get_url(info_item, max_id), headers=request_header)
         response_json = response.json()
         # 添加评论
-        for data_item in response.json()["data"]:
+        for data_item in response_json["data"]:
             add_comment(data_item["text_raw"])
             handle_comments(data_item["comments"])
         # 翻页，如果已经到达最后一页，则爬下一个帖子
         max_id = response_json["max_id"]
         if max_id == 0:
             break
+
+file.close()
