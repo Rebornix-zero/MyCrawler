@@ -1,1 +1,5 @@
 /Crawler for youth night school/comments
+
+__pycache__/
+*.py[cod]
+*$py.class

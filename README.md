@@ -1,2 +1,2 @@
-# MyCrawler
-some trail for crawler technique.
+# Others
+Set of some mini projects or labs
